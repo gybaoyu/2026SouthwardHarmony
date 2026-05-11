@@ -73,6 +73,7 @@ VOID ExampleMutexTask2(VOID)
 
 UINT32 ExampleMutex(VOID)
 {
+    printf("2024382026 陈冠宇 muxtest start...\n");    
     UINT32 ret;
     TSK_INIT_PARAM_S task1 = { 0 };
     TSK_INIT_PARAM_S task2 = { 0 };

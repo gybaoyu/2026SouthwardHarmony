@@ -47,6 +47,7 @@ VOID EventReadTask(VOID)
 
 UINT32 ExampleEvent(VOID)
 {
+    printf("2024382026 陈冠宇 myevent start...\n");
     UINT32 ret;
     UINT32 taskId;
     TSK_INIT_PARAM_S taskParam;

@@ -53,6 +53,7 @@ UINT32 ExampleTaskLo(VOID)
 /* 任务测试入口函数，在里面创建优先级不一样的两个任务 */
 UINT32 ExampleTaskCaseEntry(VOID)
 {
+    printf("2024382026 陈冠宇 mytask start...\n");
     UINT32 ret;
     TSK_INIT_PARAM_S initParam = {0};
 

@@ -13,7 +13,7 @@ STATIC UINT32 myqueue;
 VOID SendEntry(VOID)
 {
     UINT32 ret = 0;
-    CHAR msg[] = "testmsg";
+    CHAR msg[] = "2024382026 陈冠宇 testmsg";
     UINT32 len = sizeof(msg);
 
     ret = LOS_QueueWriteCopy(myqueue, msg, len, 0);
