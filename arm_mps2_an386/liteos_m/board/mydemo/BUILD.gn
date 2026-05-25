@@ -1,0 +1,14 @@
+static_library("mydemo"){
+    sources = [
+        "mytask.c",
+        "event.c",
+        "muxtask.c",
+        "msgqueue.c",
+        "semaphore.c",
+        "text_demo.c",
+        "memorytest.c",
+    ]
+    include_dirs = [
+        "//kernel/liteos_m/kernel/include",    
+    ]
+}
