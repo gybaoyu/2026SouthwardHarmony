@@ -79,7 +79,9 @@ LITE_OS_SEC_TEXT_INIT int main(void)
     registerMyEvent();
     registerMySem();
     registerTextDemo();
-    ExampleDynMem();
+    // ExampleDynMem();
+    
+    regMyShellCmd();
     ret = LosAppInit();
     if (ret != LOS_OK) {
         printf("LosAppInit failed! ERROR: 0x%x\n", ret);

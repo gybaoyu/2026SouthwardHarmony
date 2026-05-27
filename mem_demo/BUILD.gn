@@ -1,0 +1,10 @@
+static_library("mem_demo"){
+    sources = [
+        "mem_demo.c",
+    ]
+    include_dirs = [
+        ".",
+        "//kernel/liteos_m/testsuites/include",
+
+    ]
+}

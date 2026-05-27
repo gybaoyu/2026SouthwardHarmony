@@ -46,6 +46,7 @@ kernel_module(module_name) {
   ]
   deps = [ "//device/qemu/arm_mps2_an386/liteos_m/board/fs:fs_adapter" ]
   deps += ["mydemo:mydemo"]
+  deps += ["mem_demo:mem_demo"]
   include_dirs = [ "//device/qemu/arm_mps2_an386/liteos_m/board/fs" ]
   if (!defined(LOSCFG_TEST)) {
     # kernel's testsuites not enabled, use ower's
