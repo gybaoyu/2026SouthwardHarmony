@@ -15,6 +15,7 @@ extern "C" {
 #include "math.h"
 
 
+
 #define TEST_MEM_SIZE 0x2000
 
 #define IS_ALIGNED_SIZE(value, alignSize) (0 == ((UINT32)(value) & (UINT32)((alignSize) - 1)))

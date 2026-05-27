@@ -81,6 +81,7 @@ LITE_OS_SEC_TEXT_INIT int main(void)
     registerTextDemo();
     // ExampleDynMem();
     
+    registerMyHwi();
     regMyShellCmd();
     ret = LosAppInit();
     if (ret != LOS_OK) {
