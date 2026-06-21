@@ -1,0 +1,25 @@
+# Copyright (c) 2022-2022 Huawei Device Co., Ltd. All rights reserved.
+#
+# 分布式软总线实验手册案例 —— 构建配置
+# 编译方式: 在完整 OpenHarmony 系统（非 LiteOS-M）下编译
+# 依赖 foundation/communication/dsoftbus SDK
+
+import("//build/ohos.gni")
+
+ohos_executable("dsoftbus_send_data") {
+  sources = [
+    "dsoftbus_send_data.c",
+  ]
+
+  include_dirs = [
+    "//foundation/communication/dsoftbus/interfaces/kits/transport",
+    "//foundation/communication/dsoftbus/interfaces/kits/bus_center",
+  ]
+
+  deps = [
+    "//foundation/communication/dsoftbus/sdk:softbus_client",
+  ]
+
+  part_name = "dsoftbus_demo"
+  subsystem_name = "applications"
+}
