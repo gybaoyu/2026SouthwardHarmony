@@ -7,20 +7,25 @@
 #include "shell.h"
 #include "shcmd.h"
 
+/* 使用的中断号 */
 #define HWI_NUM_TEST 7
 
+/* 用户中断处理函数 */
 STATIC VOID UsrIrqEntry(VOID)
 {
     printf("in the func UsrIrqEntry\n");
 }
 
+/* 触发中断的任务函数 */
 STATIC VOID InterruptTest(VOID)
 {
     printf("Task trigger interrupt start.\n");
+    /* 触发指定中断 */
     LOS_HwiTrigger(HWI_NUM_TEST);
     printf("Task trigger interrupt done.\n");
 }
 
+/* 中断测试入口函数: 创建中断 -> 触发中断 -> 删除中断 */
 UINT32 ExampleInterrupt(VOID)
 {
     printf("2024382026 陈冠宇 hwitest start...\n");
@@ -68,6 +73,7 @@ UINT32 ExampleInterrupt(VOID)
     return LOS_OK;
 }
 
+/* 注册shell命令 */
 int registerMyHwi(void)
 {
     OsShellInit();
